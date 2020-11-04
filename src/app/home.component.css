@@ -1,0 +1,23 @@
+.home-container {
+    height: 100%;
+}
+
+.design-choice {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: space-evenly;
+    width: 500px;
+}
+
+.design-choice .custom-box {
+    height: 200px;
+    width: 200px;
+    border: 1px solid black;
+    text-align: center;
+    line-height: 200px;
+    border-radius: 5px;
+    cursor: pointer;
+}

@@ -1,0 +1,51 @@
+
+
+.feature-container {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    top: 40px;
+    flex-wrap: wrap;
+}
+
+.feature1 {
+    height: 250px;
+    width: 350px;
+    margin: 40px 0 40px 0;
+    top: 100px;
+    border: 1px solid black;
+    padding: 20px;
+}
+
+.feature1 .dropdown-menu {
+    max-height: 300px;
+    overflow: scroll;
+}
+
+.feature2 {
+    height: 250px;
+    width: 250px;
+    margin: 40px 0 40px 0;
+    top: 100px;
+    border: 1px solid black;
+    padding: 20px;
+    width: 350px;
+}
+
+.feature3 {
+    height: 250px;
+    width: 350px;
+    margin: 40px 0 40px 0;
+    top: 100px;
+    border: 1px solid black;
+    padding: 20px;
+}
+
+.feature4 {
+    height: 250px;
+    width: 350px;
+    margin: 40px 0 40px 0;
+    top: 100px;
+    border: 1px solid black;
+    padding: 20px;
+}

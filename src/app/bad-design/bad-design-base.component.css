@@ -1,0 +1,24 @@
+.version-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 700px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.version {
+    height: 200px;
+    width: 200px;
+    border: 1px solid black;
+    border-radius: 10px;
+    text-align: center;
+    line-height: 200px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.title-text{
+    
+}
