@@ -26,7 +26,7 @@ export class V2Component {
     for (let i = 0; i < listItems.length; i++) {
       let txtValue = listItems[i].textContent || listItems[i].innerText;
       if (txtValue.toUpperCase().indexOf(filter) > -1) {
-        listItems[i].style.display = "";
+        listItems[i].style.display = "block";
       } else {
         listItems[i].style.display = "none";
       }
