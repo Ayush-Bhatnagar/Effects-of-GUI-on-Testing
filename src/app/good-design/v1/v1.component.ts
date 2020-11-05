@@ -12,8 +12,14 @@ export class V1Component {
    @ViewChild('drpwdwn',{static:false}) dropdown: ElementRef;
    @ViewChild('inpt',{static:false}) input: ElementRef;
    faCaretDown = faCaretDown;
+   contactStatusText: string;
+   amountStatusText: string;
+   urlStatusText: string;
 
     constructor(private router: Router) {
+      this.contactStatusText = "";
+      this.amountStatusText = "";
+      this.urlStatusText = "";
     }
 
     toggle() {
@@ -34,4 +40,29 @@ export class V1Component {
       }
     }
 
+    inputMobile($event) {
+      this.contactStatusText = "";
+      if($event.keyCode == 13) {
+        let value = $event.currentTarget.value;
+        if(value.length!=8) { this.contactStatusText = "Rejected"}
+        else this.contactStatusText = "Accepted";
+      }
+    }
+
+    inputAmount($event) {
+      this.amountStatusText = "";
+      if($event.keyCode == 13) {
+        let value = parseInt($event.currentTarget.value);
+        if(value<=500) { this.amountStatusText = "Accepted"; }
+        else this.amountStatusText = "Rejected";
+        
+      }
+    }
+
+    inputUrl($event) {
+        this.urlStatusText = "";
+        if($event.keyCode == 13) {
+          this.urlStatusText = "Accepted";
+        }
+    }
 }

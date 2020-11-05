@@ -21,24 +21,27 @@
       </div>
       <div class="feature2">
         <p class="feature-title">Feature 2: Text Input Field</p>
-        <label for="url" class="mt-3">Your vanity URL</label>
+        <label for="url" class="mt-3">Your profile URL</label>
         <div class="input-group">
-            <input type="text" class="form-control" id="url">
+            <input type="text" class="form-control" id="url" (keyup)="inputUrl($event)">
         </div>
+        <label class="status mt-3">{{urlStatusText}}</label>
       </div>
       <div class="feature3">
         <p class="feature-title">Feature 3: Text Input Field</p>
-        <label for="mobile-no" class="mt-3">Your mobile number</label>
+        <label for="mobile-no" class="mt-3">Your 8 digit contact number</label>
         <div class="input-group">
-            <input type="text" class="form-control" id="mobile-no">
+            <input type="text" class="form-control" id="mobile-no" (keyup)="inputMobile($event)">
         </div>
+        <label class="status mt-3">{{contactStatusText}}</label>
       </div>
       <div class="feature4">
         <p class="feature-title">Feature 4: Text Input Field</p>
-        <label for="amount" class="mt-3">Your amount</label>
+        <label for="amount" class="mt-3">Your amount (max limit 500$)</label>
         <div class="input-group">
-          <input type="text" class="form-control" id="amount">
+          <input type="text" class="form-control" id="amount" (keyup)="inputAmount($event)">
         </div>
+        <label class="status mt-3">{{amountStatusText}}</label>
       </div>
     </div>
 </div>

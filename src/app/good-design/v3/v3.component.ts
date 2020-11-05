@@ -12,8 +12,15 @@ export class V3Component {
   @ViewChild('drpwdwn',{static:false}) dropdown: ElementRef;
   @ViewChild('inpt',{static:false}) input: ElementRef;
   faCaretDown = faCaretDown;
-    
-  constructor(private router: Router) { }
+  contactStatusText: string;
+  amountStatusText: string;
+  urlStatusText: string;
+
+  constructor(private router: Router) { 
+    this.contactStatusText = "";
+    this.amountStatusText = "";
+    this.urlStatusText = "";
+  }
 
   toggle() {
     this.dropdown.nativeElement.classList.toggle("show");
@@ -21,7 +28,6 @@ export class V3Component {
 
   filter() {
     let filter = this.input.nativeElement.value.toUpperCase();
-    debugger;
     let listItems = this.dropdown.nativeElement.getElementsByTagName("a");
     for (let i = 0; i < listItems.length; i++) {
       let txtValue = listItems[i].textContent || listItems[i].innerText;
@@ -31,6 +37,32 @@ export class V3Component {
         listItems[i].style.display = "none";
       }
     }
-  } 
+  }
+  
+  inputMobile($event) {
+    this.contactStatusText = "";
+    if($event.keyCode == 13) {
+      let value = $event.currentTarget.value;
+      if(value.length!=12) { this.contactStatusText = "Rejected"}
+      else this.contactStatusText = "Accepted";
+    }
+  }
+
+  inputAmount($event) {
+    this.amountStatusText = "";
+    if($event.keyCode == 13) {
+      let value = parseInt($event.currentTarget.value);
+      if(value<=1500) { this.amountStatusText = "Accepted"; }
+      else this.amountStatusText = "Rejected";
+      
+    }
+  }
+
+  inputUrl($event) {
+      this.urlStatusText = "";
+      if($event.keyCode == 13) {
+        this.urlStatusText = "Accepted";
+      }
+  }
 
 }

@@ -27,33 +27,36 @@
     </div>
     <div class="feature2">
       <p class="feature-title">Feature 2: Prepend Input Field</p>
-      <label for="url" class="mt-3">Your vanity URL</label>
+      <label for="url" class="mt-3">Your profile URL</label>
       <div class="input-group">
           <div class="input-group-prepend">
-              <span class="input-group-text" id="basic-addon3">https://example.com/users/</span>
+              <span class="input-group-text" id="basic-addon3">https://domain2.com/users/</span>
           </div>
-          <input type="text" class="form-control" id="url" aria-describedby="basic-addon3">
+          <input type="text" class="form-control" id="url" aria-describedby="basic-addon3" (keyup)="inputUrl($event)">
       </div>
+      <label class="status mt-3">{{urlStatusText}}</label>
     </div>
 
     <div class="feature3">
       <p class="feature-title">Feature 3: Numeric Input Field</p>
-      <label for="mobile-no" class="mt-3">Your mobile number</label>
+      <label for="mobile-no" class="mt-3">Your 10 digit contact number</label>
       <div class="input-group mb-3">
-          <input type="number" class="form-control" id="mobile-no" aria-describedby="basic-addon3">
+          <input type="number" class="form-control" id="mobile-no" aria-describedby="basic-addon3" (keyup)="inputMobile($event)">
       </div>
+      <label class="status mt-3">{{contactStatusText}}</label>
   </div>
 
   <div class="feature4">
     <p class="feature-title">Feature 4: Restricted Input Field</p>
-    <label for="amount" class="mt-3">Your amount</label>
+    <label for="amount" class="mt-3">Your amount (max limit 1000$)</label>
     <div class="input-group">
-      <input type="number" class="form-control" aria-label="Dollar amount (with two decimal places)">
+      <input type="number" min="0" max="1000" class="form-control" aria-label="Dollar amount (with two decimal places)" (keyup)="inputAmount($event)">
       <div class="input-group-append">
           <span class="input-group-text">$</span>
           <span class="input-group-text">0.00</span>
       </div>
     </div>
+    <label class="status mt-3">{{amountStatusText}}</label>
   </div>
 
   </div>
