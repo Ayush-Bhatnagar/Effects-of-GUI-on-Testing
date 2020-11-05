@@ -71,7 +71,7 @@ const {Builder, By, Key, until} = require('selenium-webdriver');
 		if(n!=0)  count++;
 	})
 	await driver.findElement(By.css(cssSelector)).clear();
-	console.log(count);
+	//console.log(count);
 	if(count==3) console.log("Test Case Passed");
 	else console.log("Test Case Failed");
   } 

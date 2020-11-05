@@ -17,6 +17,9 @@
     line-height: 200px;
     box-sizing: border-box;
     cursor: pointer;
+    color: white;
+    font-size: 20px;
+    background-color: brown;
 }
 
 .title-text{

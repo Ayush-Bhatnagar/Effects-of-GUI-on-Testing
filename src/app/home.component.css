@@ -1,5 +1,6 @@
 .home-container {
     height: 100%;
+    background-color: #6c757d;
 }
 
 .design-choice {
@@ -9,15 +10,23 @@
     transform: translate(-50%, -50%);
     display: flex;
     justify-content: space-evenly;
-    width: 500px;
+    width: 900px;
 }
 
 .design-choice .custom-box {
-    height: 200px;
-    width: 200px;
+    height: 300px;
+    width: 300px;
     border: 1px solid black;
     text-align: center;
-    line-height: 200px;
+    line-height: 300px;
     border-radius: 5px;
+    font-size: 24px;
     cursor: pointer;
+    color: white;
+    background-image: linear-gradient(#D64567, rgba(220, 53, 69, 0.8392156862745098));
+    font-size: 24px;
+}
+
+.title-white {
+    color: white;
 }
